@@ -6,7 +6,7 @@ var request = require('request');
 
 app.use(bodyParser.json());
 
-var port = process.env.port || 5000
+
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -36,5 +36,4 @@ app.get('/api', (req, res) => {
 
 
 
-app.listen(port);
-console.log('Listening on port 5000');
+module.exports = app;
