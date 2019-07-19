@@ -14,16 +14,16 @@ app.use(function(req, res, next) {
     next();
   });
 
-app.get('/', (req, res) => {
+app.get('/api/', (req, res) => {
     res.send('hello');
   });
 
-app.get('/api', (req, res) => {
+app.get('/api/v1/', (req, res) => {
 
     request('https://cat-fact.herokuapp.com/facts',  (error, response, body) => {
         if(error) {
             // If there is an error, tell the user 
-            res.send('An erorr occured')
+            res.send('An error happened')
         }
         // Otherwise do something with the API data and send a response
         else {
