@@ -25,7 +25,7 @@
             function myFunction() {
                 console.log("got click");
                 console.log("inside/src")
-                axios.get('http://192.168.99.105/api/v1/')
+                axios.get('https://devops.gse.icp1.csplab.local:8443/kubernetes/api/v1/namespaces/jhovanyg/services/server-service:5000/proxy/api/v1')
                     .then(function (response) {
                         // handle success
                         console.log(response.data);
